@@ -13,7 +13,7 @@ app.secret_key = os.environ.get("FLASK_SECRET_KEY", "generate-a-long-random-stri
 
 # ---------------- AWS CONNECTION ----------------
 # It is better to rely on EC2 IAM Roles than hardcoded regions if possible
-REGION = os.environ.get("AWS_REGION", "ap-south-1")
+REGION = os.environ.get("AWS_REGION", "us-east-1")
 dynamodb = boto3.resource('dynamodb', region_name=REGION)
 sns = boto3.client('sns', region_name=REGION)
 
